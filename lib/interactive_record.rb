@@ -78,11 +78,11 @@ class InteractiveRecord
 
 
 
-  
+
   def self.find_by(property={})
       self.find_for_insert(property)
       sql = <<-SQL
-          SELECT * FROM #{self.table_name} 
+          SELECT * FROM #{self.table_name}
           WHERE #{self.find_for_insert}= ;
       SQL
       binding.pry
