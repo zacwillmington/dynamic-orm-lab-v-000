@@ -67,7 +67,7 @@ class InteractiveRecord
       vals = []
       property.each do |key, value|
           binding.pry
-        vals << "'#{key} = ?'"
+        vals << "'#{key.to_s} = ?'"
       end
       vals.join(", ")
       binding.pry
