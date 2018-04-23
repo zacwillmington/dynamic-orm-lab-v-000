@@ -87,6 +87,6 @@ class InteractiveRecord
           WHERE #{self.find_for_insert_values};
       SQL
       binding.pry
-      DB[:conn].execute(sql, )
+      DB[:conn].execute(sql, "Susan")
   end
 end
