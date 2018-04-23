@@ -63,7 +63,7 @@ class InteractiveRecord
 
 
 
-  def self.find_for_insert_keys(property={})
+  def self.find_for_insert_values(property={})
       vals = []
       property.each do |key, value|
           binding.pry
@@ -84,7 +84,7 @@ class InteractiveRecord
       self.find_for_insert(property)
       sql = <<-SQL
           SELECT * FROM #{self.table_name};
-          WHERE #{self.find_for_insert_keys}= ;
+          WHERE #{self.find_for_insert_values}= ;
       SQL
       binding.pry
       DB[:conn].execute(sql, )
