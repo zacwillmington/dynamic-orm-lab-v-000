@@ -58,7 +58,7 @@ class InteractiveRecord
         DB[:conn].execute(sql, name)
   end
 
-  def self.find_for_insert(property:)
+  def self.find_for_insert(property={})
 
       binding.pry
   end
