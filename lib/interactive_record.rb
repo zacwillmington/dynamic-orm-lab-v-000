@@ -60,7 +60,7 @@ class InteractiveRecord
 
   def self.find_by(property:)
       sql = <<-SQL
-          SELECT * FROM #{self.table_name} WHERE ;
+          SELECT * FROM #{self.table_name};
       SQL
       binding.pry
       DB[:conn].execute(sql, name)
