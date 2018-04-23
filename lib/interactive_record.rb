@@ -58,19 +58,32 @@ class InteractiveRecord
         DB[:conn].execute(sql, name)
   end
 
+
+
+
+
+
   def self.find_for_insert(property={})
       vals = []
       property.each do |key, value|
           binding.pry
-        vals << "'#{send(value)}'" unless send(value) == nil
-      end
+        vals << "'#{key = ? }'" 
       vals.join(", ")
       binding.pry
   end
+
+
+
+
+
+
+
+  
   def self.find_by(property={})
       self.find_for_insert(property)
       sql = <<-SQL
-          SELECT * FROM #{self.table_name};
+          SELECT * FROM #{self.table_name} 
+          WHERE #{self.find_for_insert}= ;
       SQL
       binding.pry
       DB[:conn].execute(sql)
