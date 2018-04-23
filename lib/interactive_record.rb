@@ -60,7 +60,7 @@ class InteractiveRecord
 
   def self.find_for_insert(property={})
       vals = []
-      property.each do |value|
+      property.each do |key, value|
           binding.pry
         vals << "'#{send(value)}'" unless send(value) == nil
       end
