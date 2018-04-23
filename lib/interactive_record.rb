@@ -68,7 +68,7 @@ class InteractiveRecord
       property.each do |key, value|
           binding.pry
         vals << "'#{key} = ?'"
-    end
+      end
       vals.join(", ")
       binding.pry
   end
