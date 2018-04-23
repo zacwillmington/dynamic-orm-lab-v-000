@@ -58,7 +58,11 @@ class InteractiveRecord
         DB[:conn].execute(sql, name)
   end
 
-  def self.find_by(name)
+  def self.find_for_insert(property:)
+
+      binding.pry
+  end
+  def self.find_by(property:)
       sql = <<-SQL
           SELECT * FROM #{self.table_name};
       SQL
