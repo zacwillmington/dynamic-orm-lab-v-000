@@ -63,6 +63,6 @@ class InteractiveRecord
           SELECT * FROM #{self.table_name};
       SQL
       binding.pry
-      DB[:conn].execute(sql, name)
+      DB[:conn].execute(sql)
   end
 end
