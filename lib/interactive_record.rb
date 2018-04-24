@@ -66,11 +66,11 @@ class InteractiveRecord
   def self.find_for_insert_values(property={})
       vals = []
       property.each do |key, value|
-          binding.pry
+        #   binding.pry
         vals << "#{key.to_s} = ?"
       end
       vals.join(", ")
-      binding.pry
+    #   binding.pry
   end
 
 
