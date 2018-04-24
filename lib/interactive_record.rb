@@ -84,7 +84,7 @@ class InteractiveRecord
 
       sql = <<-SQL
           SELECT * FROM #{self.table_name};
-          WHERE #{self.find_for_insert_values(property={})} 
+          WHERE #{self.find_for_insert_values(property={})}
           ORDER BY id LIMIT 1;
       SQL
     #   binding.pry
