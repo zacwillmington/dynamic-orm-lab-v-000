@@ -87,6 +87,6 @@ class InteractiveRecord
           WHERE name = ?;
       SQL
       binding.pry
-      DB[:conn].execute(sql, property[:name])
+      DB[:conn].execute(sql, property[0])
   end
 end
