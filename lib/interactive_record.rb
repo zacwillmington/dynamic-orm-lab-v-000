@@ -81,13 +81,13 @@ class InteractiveRecord
 
 
   def self.find_by(property={})
-
+      arr = []
       sql = <<-SQL
           SELECT * FROM #{self.table_name};
           WHERE #{self.find_for_insert_values(property={})}
           ORDER BY id LIMIT 1;
       SQL
        binding.pry
-      DB[:conn].execute(sql, property[0]).first
+      arr << DB[:conn].execute(sql, property[0]).first
   end#[{"id"=>1, "name"=>"Susan", "grade"=>10, 0=>1, 1=>"Susan", 2=>10}]
 end
