@@ -70,7 +70,7 @@ class InteractiveRecord
         vals << "#{key.to_s} = ?"
       end
       vals.join(", ")
-    #   binding.pry
+      binding.pry
   end
 
 
