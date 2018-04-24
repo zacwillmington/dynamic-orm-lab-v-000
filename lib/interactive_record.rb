@@ -81,7 +81,7 @@ class InteractiveRecord
 
 
   def self.find_by(property={})
-      self.find_for_insert(property)
+      self.find_for_insert_values(property)
       sql = <<-SQL
           SELECT * FROM #{self.table_name};
           WHERE #{self.find_for_insert_values};
