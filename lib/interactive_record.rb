@@ -84,7 +84,7 @@ class InteractiveRecord
 
       sql = <<-SQL
           SELECT * FROM #{self.table_name};
-          WHERE #{self.find_for_insert_values(property)};
+          WHERE #{self.find_for_insert_values};
       SQL
       binding.pry
       DB[:conn].execute(sql, name)
