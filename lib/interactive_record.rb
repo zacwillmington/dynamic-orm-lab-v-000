@@ -89,5 +89,5 @@ class InteractiveRecord
       SQL
        binding.pry
       DB[:conn].execute(sql, property[0])
-  end
+  end#[{"id"=>1, "name"=>"Susan", "grade"=>10, 0=>1, 1=>"Susan", 2=>10}]
 end
