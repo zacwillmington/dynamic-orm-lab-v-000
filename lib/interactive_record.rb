@@ -87,7 +87,7 @@ class InteractiveRecord
           WHERE #{self.find_for_insert_values(property={})}
           ORDER BY id LIMIT 1;
       SQL
-    #   binding.pry
+       binding.pry
       DB[:conn].execute(sql, property[0])
   end
 end
