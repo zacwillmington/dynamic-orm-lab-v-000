@@ -86,7 +86,7 @@ class InteractiveRecord
           SELECT * FROM #{self.table_name};
           WHERE #{self.find_for_insert_values(property={})};
       SQL
-      binding.pry
+    #   binding.pry
       DB[:conn].execute(sql, property[0])
   end
 end
