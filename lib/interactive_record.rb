@@ -80,7 +80,7 @@ class InteractiveRecord
 
 
 
-  def self.find_by(property={})
+  def self.find_by(property={}, name)
 
       sql = <<-SQL
           SELECT * FROM #{self.table_name};
