@@ -80,13 +80,13 @@ class InteractiveRecord
 
 
 
-  def self.find_by(property={}, name)
+  def self.find_by(property={})
 
       sql = <<-SQL
           SELECT * FROM #{self.table_name};
-          WHERE #{self.find_for_insert_values};
+          WHERE #{self.find_for_insert_values(property)};
       SQL
       binding.pry
-      DB[:conn].execute(sql, name)
+      DB[:conn].execute(sql,"Susan")
   end
 end
