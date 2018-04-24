@@ -88,6 +88,6 @@ class InteractiveRecord
           ORDER BY id LIMIT 1;
       SQL
        binding.pry
-      DB[:conn].execute(sql, property[0])
+      DB[:conn].execute(sql, property[0]).first
   end#[{"id"=>1, "name"=>"Susan", "grade"=>10, 0=>1, 1=>"Susan", 2=>10}]
 end
